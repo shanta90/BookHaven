@@ -123,6 +123,13 @@ export default function LoginPage() {
                 </div>
               </div>
 
+              <div className="flex items-center justify-between">
+                <label className="flex items-center gap-3 cursor-pointer group">
+                  <input type="checkbox" className="checkbox checkbox-primary rounded-lg border-2" />
+                  <span className="text-xs font-bold text-base-content/40 uppercase tracking-widest group-hover:text-base-content transition-colors">Remember me</span>
+                </label>
+              </div>
+
               <button className="btn btn-primary btn-lg w-full h-16 rounded-2xl shadow-2xl shadow-primary/20 group" disabled={loading}>
                 {loading ? <span className="loading loading-spinner loading-sm" /> : (
                   <>
