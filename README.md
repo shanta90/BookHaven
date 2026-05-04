@@ -63,7 +63,7 @@ A seamless and modern web application designed to digitize the traditional libra
    npm run dev
    ```
 
-5. Open [http://localhost:3000](http://localhost:3000) in your browser.
+5. Open the app in your browser at the provided local port.
 
 ## 📁 Project Structure
 
