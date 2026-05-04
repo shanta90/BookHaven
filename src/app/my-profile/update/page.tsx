@@ -41,7 +41,7 @@ export default function UpdateProfilePage() {
         toast.success("Profile updated successfully!");
         router.push("/my-profile");
       }
-    } catch (err) {
+    } catch {
       toast.error("Something went wrong");
     } finally {
       setLoading(false);

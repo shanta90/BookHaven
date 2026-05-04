@@ -7,11 +7,18 @@ import { User, Mail, Shield, Edit2, Calendar, BookMarked } from "lucide-react";
 import Link from "next/link";
 import { getUserStats } from "../actions/user";
 
+interface UserStats {
+  borrowedCount: number;
+  waitlistCount: number;
+  borrowedItems: unknown[];
+  waitlistItems: unknown[];
+}
+
 export default function MyProfilePage() {
   const { data: session, isPending } = useSession();
   const router = useRouter();
 
-  const [stats, setStats] = useState<any>({ 
+  const [stats, setStats] = useState<UserStats>({ 
     borrowedCount: 0, 
     waitlistCount: 0,
     borrowedItems: [],
@@ -27,7 +34,7 @@ export default function MyProfilePage() {
     if (session) {
       setStatsLoading(true);
       getUserStats().then((data) => {
-        setStats(data);
+        setStats(data as UserStats);
         setStatsLoading(false);
       });
     }
@@ -59,7 +66,7 @@ export default function MyProfilePage() {
             <div>
               <h1 className="text-3xl font-extrabold flex items-center gap-2">
                 {session.user.name}
-                <Shield className="h-5 w-5 text-primary" title="Verified Member" />
+                <Shield className="h-5 w-5 text-primary" />
               </h1>
               <p className="text-gray-500 flex items-center gap-1 mt-1">
                 <Mail className="h-4 w-4" /> {session.user.email}

@@ -8,7 +8,7 @@ import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import { ArrowRight, BookCheck, Clock, Shield, Star, Zap, Sparkles } from "lucide-react";
+import { ArrowRight, Shield, Star, Zap, Sparkles } from "lucide-react";
 
 export default function Home() {
   const featuredBooks = getFeaturedBooks();
@@ -101,7 +101,7 @@ export default function Home() {
       <section className="container mx-auto px-6">
         <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
           <div className="space-y-4">
-            <h2 className="text-5xl font-black tracking-tight text-base-content">The Curator's List</h2>
+            <h2 className="text-5xl font-black tracking-tight text-base-content">The Curator&apos;s List</h2>
             <p className="text-xl text-base-content/50 max-w-xl leading-relaxed">Handpicked masterpieces that define genres and spark imagination.</p>
           </div>
           <Link href="/all-books" className="btn btn-outline btn-lg rounded-2xl border-2 px-10 h-16 hover:bg-primary hover:border-primary group">

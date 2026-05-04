@@ -5,9 +5,11 @@ import { signIn } from "@/lib/auth-client";
 import { useRouter, useSearchParams } from "next/navigation";
 import { toast } from "react-hot-toast";
 import Link from "next/link";
-import { Mail, Lock, LogIn, ArrowRight, BookOpen, Sparkles, ShieldCheck } from "lucide-react";
+import { Mail, Lock, LogIn, BookOpen } from "lucide-react";
 
-export default function LoginPage() {
+import { Suspense } from "react";
+
+function LoginContent() {
   const [email, setEmail]       = useState("");
   const [password, setPassword] = useState("");
   const [loading, setLoading]   = useState(false);
@@ -162,5 +164,17 @@ export default function LoginPage() {
         </div>
       </div>
     </div>
+  );
+}
+
+export default function LoginPage() {
+  return (
+    <Suspense fallback={
+      <div className="flex justify-center items-center h-screen bg-base-200">
+        <span className="loading loading-spinner loading-lg text-primary"></span>
+      </div>
+    }>
+      <LoginContent />
+    </Suspense>
   );
 }

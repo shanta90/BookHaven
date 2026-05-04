@@ -5,13 +5,13 @@ import { signUp, signIn } from "@/lib/auth-client";
 import { useRouter } from "next/navigation";
 import { toast } from "react-hot-toast";
 import Link from "next/link";
-import { Mail, Lock, User, ImageIcon, UserPlus, ArrowRight, BookOpen, Sparkles, CheckCircle2 } from "lucide-react";
+import { Mail, Lock, User, UserPlus, BookOpen, CheckCircle2 } from "lucide-react";
 
 export default function RegisterPage() {
   const [name,     setName]     = useState("");
   const [email,    setEmail]    = useState("");
   const [password, setPassword] = useState("");
-  const [image,    setImage]    = useState("");
+  const image = "";
   const [loading,  setLoading]  = useState(false);
   const router = useRouter();
 
@@ -86,7 +86,7 @@ export default function RegisterPage() {
 
           <div className="relative z-10 bg-white/5 border border-white/10 p-6 rounded-[32px] backdrop-blur-md">
             <p className="text-sm font-bold opacity-70 italic leading-relaxed">
-              "The most intuitive digital library I've ever used. The transition between devices is absolutely seamless."
+              &quot;The most intuitive digital library I&apos;ve ever used. The transition between devices is absolutely seamless.&quot;
             </p>
             <div className="mt-4 flex items-center gap-3">
               <div className="w-10 h-10 rounded-full bg-secondary/20" />

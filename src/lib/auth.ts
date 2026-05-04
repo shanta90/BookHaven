@@ -9,7 +9,7 @@ if (!MONGODB_URI) {
 }
 
 // Global caching for the MongoDB client
-let client: MongoClient = new MongoClient(MONGODB_URI);
+const client: MongoClient = new MongoClient(MONGODB_URI);
 export const db = client.db();
 console.log("▲ MongoDB client initialized for BookHaven Archives");
 

@@ -1,14 +1,14 @@
 "use client";
 
-import { useState, useMemo } from "react";
-import { getBooks, searchBooks } from "@/lib/books";
+import { Suspense, useState, useMemo } from "react";
+import { searchBooks } from "@/lib/books";
 import BookCard from "@/components/BookCard";
 import { Search, Filter, X, Grid, List, SlidersHorizontal, Sparkles } from "lucide-react";
 import { useSearchParams } from "next/navigation";
 
 const CATEGORIES = ["All", "Story", "Tech", "Science"];
 
-export default function AllBooksPage() {
+function AllBooksContent() {
   const searchParams = useSearchParams();
   const initialCategory = searchParams.get("category") || "All";
   
@@ -42,7 +42,7 @@ export default function AllBooksPage() {
         </div>
       </section>
 
-      {/* Main Content Area - Adjusted overlap to prevent search bar collisions */}
+      {/* Main Content Area */}
       <div className="container mx-auto px-4 -mt-20 pb-24 relative z-40">
         <div className="flex flex-col lg:flex-row gap-8">
           
@@ -102,9 +102,9 @@ export default function AllBooksPage() {
               </div>
 
               <div className="bg-primary/5 p-6 rounded-[24px] border border-primary/10">
-                <p className="text-xs font-bold text-primary mb-2 italic">Librarian's Tip</p>
+                <p className="text-xs font-bold text-primary mb-2 italic">Librarian&apos;s Tip</p>
                 <p className="text-xs leading-relaxed opacity-60">
-                  Try searching by author name if you can't find a specific title.
+                  Try searching by author name if you can&apos;t find a specific title.
                 </p>
               </div>
             </div>
@@ -176,5 +176,17 @@ export default function AllBooksPage() {
         </div>
       </div>
     </div>
+  );
+}
+
+export default function AllBooksPage() {
+  return (
+    <Suspense fallback={
+      <div className="flex justify-center items-center h-screen">
+        <span className="loading loading-spinner loading-lg text-primary"></span>
+      </div>
+    }>
+      <AllBooksContent />
+    </Suspense>
   );
 }

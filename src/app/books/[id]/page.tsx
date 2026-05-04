@@ -5,15 +5,16 @@ import { getBookById } from "@/lib/books";
 import { useParams, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { toast } from "react-hot-toast";
-import { BookOpen, User, Calendar, CheckCircle, ArrowLeft, Bookmark, Star, Share2, Info, ShoppingBag } from "lucide-react";
+import { BookOpen, Calendar, CheckCircle, ArrowLeft, Bookmark, Star, Share2, Info, ShoppingBag } from "lucide-react";
 import Link from "next/link";
+import { Book } from "@/lib/books";
 import { addToWaitlist, borrowBook } from "@/app/actions/user";
 
 export default function BookDetailsPage() {
   const { id } = useParams();
   const router = useRouter();
   const { data: session, isPending } = useSession();
-  const [book, setBook] = useState<any>(null);
+  const [book, setBook] = useState<Book | null>(null);
   const [isActing, setIsActing] = useState(false);
 
   useEffect(() => {
@@ -26,11 +27,12 @@ export default function BookDetailsPage() {
   useEffect(() => {
     if (id) {
       const foundBook = getBookById(id as string);
-      setBook(foundBook);
+      setBook(foundBook || null);
     }
   }, [id]);
 
   const handleBorrow = async () => {
+    if (!book) return;
     setIsActing(true);
     try {
       if (book.available_quantity > 0) {
@@ -41,8 +43,8 @@ export default function BookDetailsPage() {
         await addToWaitlist(book.id, book.title);
         toast.success(`You've been added to the waitlist for ${book.title}.`);
       }
-    } catch (error: any) {
-      toast.error(error.message || "Failed to complete action");
+    } catch {
+      toast.error("Failed to complete action");
     } finally {
       setIsActing(false);
     }
@@ -132,7 +134,7 @@ export default function BookDetailsPage() {
                 <h2>The Narrative</h2>
               </div>
               <p className="text-xl text-base-content/70 leading-relaxed italic font-medium">
-                "{book.description}"
+                &quot;{book.description}&quot;
               </p>
               
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 pt-4">

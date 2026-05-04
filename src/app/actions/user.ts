@@ -11,7 +11,7 @@ export async function getUserStats() {
   });
 
   if (!session) {
-    return { borrowedCount: 0, waitlistCount: 0 };
+    return { borrowedCount: 0, waitlistCount: 0, borrowedItems: [], waitlistItems: [] };
   }
 
   const userId = session.user.id;
