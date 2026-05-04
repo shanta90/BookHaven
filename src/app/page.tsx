@@ -21,7 +21,7 @@ export default function Home() {
         <div className="pointer-events-none absolute bottom-0 left-0 w-[600px] h-[600px] bg-secondary/5 rounded-full blur-[100px] -z-10" />
 
         <div className="container mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
-          <div className="space-y-10 text-center lg:text-left z-20">
+          <div className="space-y-10 text-center lg:text-left z-20 glass p-12 rounded-[40px] border-white/50 shadow-3xl">
             <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-primary/10 text-primary font-bold text-xs uppercase tracking-widest animate-pulse">
               <Sparkles className="h-4 w-4" />
               Next-Gen Digital Library
