@@ -17,7 +17,7 @@ const BookCard = ({ book }: BookCardProps) => {
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
         
-        <div className="absolute top-4 right-4 z-10">
+        <div className="absolute top-4 right-4 z-10 transition-transform duration-500 group-hover:scale-110">
           <div className={`px-4 py-1.5 rounded-full text-[10px] font-black uppercase tracking-widest text-white shadow-xl ${book.available_quantity > 0 ? "bg-emerald-500" : "bg-rose-500"}`}>
             {book.available_quantity > 0 ? "In Stock" : "Reserved"}
           </div>
