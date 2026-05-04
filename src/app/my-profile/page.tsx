@@ -56,7 +56,7 @@ export default function MyProfilePage() {
             <img 
               src={session.user.image || `https://ui-avatars.com/api/?name=${session.user.name}`} 
               alt={session.user.name} 
-              className="w-32 h-32 rounded-full object-cover"
+              className="w-32 h-32 rounded-full object-cover shadow-2xl"
             />
           </div>
         </div>
