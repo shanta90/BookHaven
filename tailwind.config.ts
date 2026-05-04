@@ -28,16 +28,15 @@ const config: Config = {
           "secondary-content": "#ffffff",
 
           "accent":         "#f59e0b",    // amber
-          "accent-content": "#1a1a1a",    // dark text on amber
+          "accent-content": "#1a1a1a",
 
           // ── Neutral / base ────────────────────────────
-          "neutral":         "#1e1e2e",
-          "neutral-content": "#e2e8f0",
-
+          "neutral": "#0f172a",
+          "neutral-content": "#f8fafc",
           "base-100": "#ffffff",
-          "base-200": "#f4f4f8",
-          "base-300": "#e5e7eb",
-          "base-content": "#1a1a2e",
+          "base-200": "#f8fafc",
+          "base-300": "#f1f5f9",
+          "base-content": "#0f172a",
 
           // ── Semantic ──────────────────────────────────
           "info":    "#3b82f6",
