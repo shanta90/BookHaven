@@ -1,4 +1,4 @@
-import { BookOpen, Globe, Mail, Share2, Phone, MapPin, Send } from "lucide-react";
+import { BookOpen, Globe, Mail, Share2, Phone, MapPin, Send, ArrowRight } from "lucide-react";
 import Link from "next/link";
 
 const Footer = () => {
@@ -30,10 +30,10 @@ const Footer = () => {
           <div className="space-y-8">
             <h4 className="text-xs font-black uppercase tracking-[0.3em] text-white">Archives</h4>
             <ul className="space-y-4 text-neutral-content/50 font-bold">
-              <li><Link href="/all-books" className="hover:text-primary transition-colors">Everything</Link></li>
-              <li><Link href="/all-books?category=Tech" className="hover:text-primary transition-colors">Tech Stack</Link></li>
-              <li><Link href="/all-books?category=Science" className="hover:text-primary transition-colors">Science & Biology</Link></li>
-              <li><Link href="/all-books?category=Story" className="hover:text-primary transition-colors">Fiction & Soul</Link></li>
+              <li><Link href="/all-books" className="hover:text-primary transition-colors flex items-center gap-2 group">Everything <ArrowRight className="h-4 w-4 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all" /></Link></li>
+              <li><Link href="/all-books?category=Tech" className="hover:text-primary transition-colors flex items-center gap-2 group">Tech Stack <ArrowRight className="h-4 w-4 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all" /></Link></li>
+              <li><Link href="/all-books?category=Science" className="hover:text-primary transition-colors flex items-center gap-2 group">Science & Biology <ArrowRight className="h-4 w-4 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all" /></Link></li>
+              <li><Link href="/all-books?category=Story" className="hover:text-primary transition-colors flex items-center gap-2 group">Fiction & Soul <ArrowRight className="h-4 w-4 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all" /></Link></li>
             </ul>
           </div>
 
