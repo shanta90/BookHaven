@@ -10,28 +10,28 @@
   },
   "dependencies": {
     "better-auth": "latest",
+    "clsx": "latest",
     "daisyui": "latest",
     "lucide-react": "latest",
     "mongodb": "latest",
     "mongoose": "latest",
-    "next": "15.1.0",
+    "next": "^16.2.4",
     "react": "19.0.0",
     "react-dom": "19.0.0",
     "react-hot-toast": "latest",
     "swiper": "latest",
-    "clsx": "latest",
     "tailwind-merge": "latest"
   },
   "devDependencies": {
+    "@eslint/eslintrc": "^3.2.0",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "autoprefixer": "^10.4.19",
     "eslint": "^9",
-    "@eslint/eslintrc": "^3.2.0",
     "eslint-config-next": "15.1.0",
     "postcss": "^8",
     "tailwindcss": "^3.4.1",
-    "autoprefixer": "^10.4.19",
     "typescript": "^5"
   }
 }
