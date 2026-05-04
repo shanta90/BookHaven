@@ -1,26 +1,116 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
+/* ══════════════════════════════════════════════════════════
+   Refined Design Tokens
+══════════════════════════════════════════════════════════ */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --background: #fdfdfd;
+  --foreground: #0f172a;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #020617;
+    --foreground: #f8fafc;
   }
 }
 
 body {
-  background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--background);
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ══════════════════════════════════════════════════════════
+   Premium Button Overrides
+══════════════════════════════════════════════════════════ */
+.btn {
+  @apply transition-all duration-300 active:scale-95 font-bold tracking-tight border-none outline-none;
+  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+}
+
+/* Primary - Indigo Silk */
+.btn-primary {
+  background: linear-gradient(135deg, #4f46e5 0%, #6366f1 100%);
+  color: white !important;
+  box-shadow: 0 10px 15px -3px rgba(79, 70, 229, 0.3);
+}
+.btn-primary:hover {
+  background: linear-gradient(135deg, #4338ca 0%, #4f46e5 100%);
+  box-shadow: 0 20px 25px -5px rgba(79, 70, 229, 0.4);
+  transform: translateY(-2px);
+}
+
+/* Secondary - Emerald Mist */
+.btn-secondary {
+  background: linear-gradient(135deg, #0d9488 0%, #14b8a6 100%);
+  color: white !important;
+  box-shadow: 0 10px 15px -3px rgba(13, 148, 136, 0.3);
+}
+.btn-secondary:hover {
+  background: linear-gradient(135deg, #0f766e 0%, #0d9488 100%);
+  box-shadow: 0 20px 25px -5px rgba(13, 148, 136, 0.4);
+  transform: translateY(-2px);
+}
+
+/* Ghost / Ghostly */
+.btn-ghost:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+  color: #4f46e5;
+}
+
+/* ══════════════════════════════════════════════════════════
+   Layered Glassmorphism
+══════════════════════════════════════════════════════════ */
+.glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.dark .glass {
+  background: rgba(15, 23, 42, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* ══════════════════════════════════════════════════════════
+   Modern Cards
+══════════════════════════════════════════════════════════ */
+.premium-card {
+  @apply bg-base-100 rounded-[32px] transition-all duration-500;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05), 0 2px 4px -2px rgb(0 0 0 / 0.05);
+}
+.premium-card:hover {
+  @apply -translate-y-2;
+  box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.15);
+}
+
+/* ══════════════════════════════════════════════════════════
+   Animations
+══════════════════════════════════════════════════════════ */
+@keyframes soft-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+.animate-soft-float {
+  animation: soft-float 5s ease-in-out infinite;
+}
+
+@keyframes marquee-silk {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.animate-marquee-silk {
+  display: flex;
+  width: max-content;
+  animation: marquee-silk 40s linear infinite;
+}
+.animate-marquee-silk:hover {
+  animation-play-state: paused;
 }

@@ -1,36 +1,76 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# BookHaven - Library Management App
 
-## Getting Started
+A seamless and modern web application designed to digitize the traditional library experience. Users can explore a vast collection of books, filter by categories, and borrow titles digitally.
 
-First, run the development server:
+## 🚀 Live Demo
+[Live URL Placeholder]
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## ✨ Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Authentication**: Secure login and registration using BetterAuth.
+  - Email and Password support.
+  - Google Social Login integration.
+  - Profile update feature (Name and Photo).
+- **Book Discovery**:
+  - Dynamic Home Page with Banner, Marquee, and Featured books.
+  - Search functionality by book title.
+  - Left Category Sidebar filter (Story, Tech, Science).
+- **Borrowing System**:
+  - Private book details view (requires login).
+  - Borrow button with real-time quantity tracking.
+- **Responsive Design**: Fully optimized for mobile, tablet, and desktop.
+- **Interactive UI**: Smooth carousels and stats using Swiper.js and Lucide Icons.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🛠️ Tech Stack
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Framework**: [Next.js 15 (App Router)](https://nextjs.org/)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/) + [DaisyUI](https://daisyui.com/)
+- **Authentication**: [BetterAuth](https://better-auth.com/)
+- **Database**: [MongoDB](https://www.mongodb.com/) (for Auth persistence)
+- **Icons**: [Lucide React](https://lucide.dev/)
+- **Notifications**: [React Hot Toast](https://react-hot-toast.com/)
+- **Carousels**: [Swiper.js](https://swiperjs.com/)
 
-## Learn More
+## 📦 Getting Started
 
-To learn more about Next.js, take a look at the following resources:
+### Prerequisites
+- Node.js 18.x or later
+- MongoDB Database (Atlas or Local)
+- Google OAuth Credentials
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Installation
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. Clone the repository:
+   ```bash
+   git clone <repository-url>
+   cd assignment
+   ```
 
-## Deploy on Vercel
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+3. Set up environment variables:
+   Create a `.env.local` file based on `.env.example`:
+   ```bash
+   cp .env.example .env.local
+   ```
+   Fill in your `MONGODB_URI`, `BETTER_AUTH_SECRET`, `GOOGLE_CLIENT_ID`, and `GOOGLE_CLIENT_SECRET`.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+4. Run the development server:
+   ```bash
+   npm run dev
+   ```
+
+5. Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+## 📁 Project Structure
+
+- `src/app`: Application routes and pages.
+- `src/components`: Reusable UI components (Navbar, Footer, BookCard).
+- `src/data`: Local JSON seed data for books.
+- `src/lib`: Configuration for Auth, MongoDB, and book helpers.
+
+## 📝 License
+This project is licensed under the MIT License.

@@ -1,0 +1,110 @@
+[
+  {
+    "id": "1",
+    "title": "The Great Gatsby",
+    "author": "F. Scott Fitzgerald",
+    "category": "Story",
+    "description": "A classic novel about the American Dream in the 1920s.",
+    "image_url": "https://images.unsplash.com/photo-1543005814-14b24e1fabb3?auto=format&fit=crop&q=80&w=1000",
+    "available_quantity": 5
+  },
+  {
+    "id": "2",
+    "title": "Clean Code",
+    "author": "Robert C. Martin",
+    "category": "Tech",
+    "description": "A handbook of agile software craftsmanship.",
+    "image_url": "https://images.unsplash.com/photo-1516116216624-53e697fedbea?auto=format&fit=crop&q=80&w=1000",
+    "available_quantity": 3
+  },
+  {
+    "id": "3",
+    "title": "A Brief History of Time",
+    "author": "Stephen Hawking",
+    "category": "Science",
+    "description": "Explaining complex cosmology to the general public.",
+    "image_url": "https://images.unsplash.com/photo-1532012197267-da84d127e765?auto=format&fit=crop&q=80&w=1000",
+    "available_quantity": 8
+  },
+  {
+    "id": "4",
+    "title": "To Kill a Mockingbird",
+    "author": "Harper Lee",
+    "category": "Story",
+    "description": "A story of racial injustice in the American South.",
+    "image_url": "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&q=80&w=1000",
+    "available_quantity": 0
+  },
+  {
+    "id": "5",
+    "title": "The Pragmatic Programmer",
+    "author": "Andrew Hunt",
+    "category": "Tech",
+    "description": "Your journey to mastery in software development.",
+    "image_url": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=1000",
+    "available_quantity": 4
+  },
+  {
+    "id": "6",
+    "title": "Cosmos",
+    "author": "Carl Sagan",
+    "category": "Science",
+    "description": "The story of cosmic evolution, science, and civilization.",
+    "image_url": "https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?auto=format&fit=crop&q=80&w=1000",
+    "available_quantity": 6
+  },
+  {
+    "id": "7",
+    "title": "1984",
+    "author": "George Orwell",
+    "category": "Story",
+    "description": "A dystopian social science fiction novel.",
+    "image_url": "https://images.unsplash.com/photo-1541963463532-d68292c34b19?auto=format&fit=crop&q=80&w=1000",
+    "available_quantity": 10
+  },
+  {
+    "id": "8",
+    "title": "Introduction to Algorithms",
+    "author": "Thomas H. Cormen",
+    "category": "Tech",
+    "description": "A comprehensive guide to modern algorithms.",
+    "image_url": "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&q=80&w=1000",
+    "available_quantity": 2
+  },
+  {
+    "id": "9",
+    "title": "The Selfish Gene",
+    "author": "Richard Dawkins",
+    "category": "Science",
+    "description": "A work on evolution through the gene-centered view.",
+    "image_url": "https://images.unsplash.com/photo-1532012197267-da84d127e765?auto=format&fit=crop&q=80&w=1000",
+    "available_quantity": 0
+  },
+  {
+    "id": "10",
+    "title": "Harry Potter",
+    "author": "J.K. Rowling",
+    "category": "Story",
+    "description": "The boy who lived and his magical adventures.",
+    "image_url": "https://images.unsplash.com/photo-1618666012174-83b441c0bc76?auto=format&fit=crop&q=80&w=1000",
+    "available_quantity": 12
+  },
+  {
+    "id": "11",
+    "title": "You Don't Know JS",
+    "author": "Kyle Simpson",
+    "category": "Tech",
+    "description": "A deep dive into the core mechanisms of JavaScript.",
+    "image_url": "https://images.unsplash.com/photo-1579468118864-1b9ea3c0db4a?auto=format&fit=crop&q=80&w=1000",
+    "available_quantity": 7
+  },
+  {
+    "id": "12",
+    "title": "Sapiens",
+    "author": "Yuval Noah Harari",
+    "category": "Science",
+    "description": "A brief history of humankind.",
+    "image_url": "https://images.unsplash.com/photo-1532012197267-da84d127e765?auto=format&fit=crop&q=80&w=1000",
+    "available_quantity": 15
+  }
+]
